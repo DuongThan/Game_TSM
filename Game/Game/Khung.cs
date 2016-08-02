@@ -47,7 +47,7 @@ namespace Game
         {
             int i;
             // ve khung theo chieu ngang
-            for (i = minPoint.X; i < maxPoint.X; i++)
+            for (i = minPoint.X; i <= maxPoint.X; i++)
             {
                 Console.SetCursorPosition(i, minPoint.Y);
                 Console.Write("-");
@@ -55,15 +55,17 @@ namespace Game
                 Console.SetCursorPosition(i, maxPoint.Y);
                 Console.Write("-");
             }
+            Console.SetCursorPosition(0, 0);
             // ve khung theo chieu doc
-            for (i = minPoint.Y+1; i < maxPoint.Y; i++)
+            for (i = minPoint.Y+1; i <= maxPoint.Y; i++)
             {
                 Console.SetCursorPosition(minPoint.X, i);
                 Console.Write("|");
 
-                Console.SetCursorPosition(maxPoint.X-1, i);
+                Console.SetCursorPosition(maxPoint.X, i);
                 Console.Write("|");
             }
+            Console.SetCursorPosition(0, 0);
         }
     }
 }

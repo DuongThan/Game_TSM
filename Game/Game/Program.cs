@@ -14,13 +14,19 @@ namespace Game
             App app = new App();
             Khung khung_ = new Khung();
             khung_.Show();
+            Random rd = new Random();
             while(true)
             {
+                if(Console.KeyAvailable)
+                {
+                    ConsoleKeyInfo info = Console.ReadKey();
+                    app.DiChuyen(info);
+                }
                 Thread.Sleep(10);
-                app.ShowApp();
-                Thread.Sleep(1000);
-                app.Moi_.XoaMoi();
-                app.Moi_ = new Moi();
+                //app.ShowMoi();
+                int t = rd.Next(1, 5);
+                app.MoiDiChuyen(t);
+                app.ShowBird();
             }
         }
     }

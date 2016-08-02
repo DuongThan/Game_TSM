@@ -77,6 +77,7 @@ namespace Game
                     Console.Write("=");
                 }
             }
+            Console.SetCursorPosition(0, 0);
         }
 
         public void Delete()

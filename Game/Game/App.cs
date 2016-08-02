@@ -11,6 +11,7 @@ namespace Game
         private Bird bird_;
         private Moi moi_;
         private DiemSo diem_;
+        private Khung khung;
 
         internal Bird Bird_
         {
@@ -43,13 +44,45 @@ namespace Game
             bird_ = new Bird(new Diem(20, 17));
             diem_ = new DiemSo();
             moi_ = new Moi();
+            khung = new Khung();
         }
 
-        public void ShowApp()
+        public void ShowBird()
         {
             bird_.Show();
-            diem_.ShowDiem(30,3);
+        }
+        public void ShowMoi()
+        {
             moi_.Show();
+        }
+
+        public void MoiDiChuyen(int chieu)
+        {
+            moi_.XoaMoi();
+            switch(chieu)
+            {
+                case 1:
+                    if (moi_.Moi_Bird.Y > khung.MinPoint.Y + 1)
+                        moi_.Moi_Bird.Y--;
+                    break;
+
+                case 2:
+                    if (moi_.Moi_Bird.Y < khung.MaxPoint.Y - 3)
+                        moi_.Moi_Bird.Y++;
+                    break;
+
+                case 3:
+                    if (moi_.Moi_Bird.X > khung.MinPoint.X + 1)
+                        moi_.Moi_Bird.X--;
+                    break;
+
+                case 4:
+                    if (moi_.Moi_Bird.X < khung.MaxPoint.X - 3)
+                        moi_.Moi_Bird.X++;
+                    break;
+            }
+           // Thread.Sleep(10);
+            ShowMoi();
         }
 
         public bool XuLyCham()
@@ -59,6 +92,37 @@ namespace Game
             return true;
 
             return false;
+        }
+
+        public void DiChuyen(ConsoleKeyInfo infokey)
+        {
+
+            bird_.Delete();
+            Thread.Sleep(1);
+            switch(infokey.Key)
+            {
+
+                case ConsoleKey.UpArrow:
+                    if (bird_.Dau_Bird.Y > khung.MinPoint.Y + 1) 
+                    bird_.Dau_Bird.Y--;
+                    break;
+
+                case ConsoleKey.DownArrow:
+                    if (bird_.Dau_Bird.Y < khung.MaxPoint.Y - 3) 
+                    bird_.Dau_Bird.Y++;
+                    break;
+
+                case ConsoleKey.LeftArrow:
+                    if (bird_.Dau_Bird.X > khung.MinPoint.X + 1) 
+                    bird_.Dau_Bird.X--;
+                    break;
+
+                case ConsoleKey.RightArrow:
+                    if (bird_.Dau_Bird.X < khung.MaxPoint.X - 3) 
+                        bird_.Dau_Bird.X++;
+                    break;
+            }
+            ShowBird();
         }
 
     }
