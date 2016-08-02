@@ -1,0 +1,6 @@
+D:\Learn\Lap tring C#\Exercise C#\Exercise-C-\Nhom_TSM\Game\Game\bin\Debug\Game.exe.config
+D:\Learn\Lap tring C#\Exercise C#\Exercise-C-\Nhom_TSM\Game\Game\bin\Debug\Game.exe
+D:\Learn\Lap tring C#\Exercise C#\Exercise-C-\Nhom_TSM\Game\Game\bin\Debug\Game.pdb
+D:\Learn\Lap tring C#\Exercise C#\Exercise-C-\Nhom_TSM\Game\Game\obj\Debug\Game.csprojResolveAssemblyReference.cache
+D:\Learn\Lap tring C#\Exercise C#\Exercise-C-\Nhom_TSM\Game\Game\obj\Debug\Game.exe
+D:\Learn\Lap tring C#\Exercise C#\Exercise-C-\Nhom_TSM\Game\Game\obj\Debug\Game.pdb
